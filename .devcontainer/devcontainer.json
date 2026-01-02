@@ -1,0 +1,7 @@
+{
+	"image": "mcr.microsoft.com/devcontainers/universal:2",
+	"features": {
+		"ghcr.io/devcontainers-extra/features/mocha:2": {},
+		"ghcr.io/devcontainers-extra/features/node-asdf:0": {}
+	}
+}
