@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check-Even-Odd</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+    <div class="flex flex-col gap-3 bg-pink-600 p-6 rounded-lg shadow-md items-center text-center mx-80 mt-40 px-19" >
+        <h1>Check-Even-Odd</h1>
+        <input type="number" name="num" id="num" class="h-10 w-120 bg-white">
+        <div class="flex flexrow gap-3 items-center justify-center mt-6">
+            <p id="demo1" class="border-white bg-black px-6 py-2 rounded-md text-white">Even</p>
+            <p id="demo2" class="border-white bg-black px-6 py-2 rounded-md text-white">odd</p>
+        </div>
+        <div class="flex flexrow gap-3 items-center justify-center mt-6">
+            <button id="btn-check" class="bg-black rounded-lg text-white px-8 py-3">CheckEvenOdd</button>
+            <button id="btn-square" class="bg-black rounded-lg text-white px-8 py-3">GetSquare</button>
+            <button id="btn-prime" class="bg-black rounded-lg text-white px-8 py-3">CheckPrime</button>
+        </div>
+        <label for="sqr" class="text-white">Square of number is : </label>
+       <input type ="number" id="sqr" readonly class="p-2 bg-black text-white text-center">
+        <label for="prime" class="text-white">Prime or Not : </label>
+        <input type ="text" id="prime" readonly class="p-2 bg-black text-white text-center">
+    </div>
+
+<script src="EvenOdd.js"></script>
+</body>
+</html>

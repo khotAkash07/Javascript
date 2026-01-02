@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CAlCULATOR</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-200">
+    <div class="container">
+      <div class="bg-black p-5" id="calculator">
+        <input
+          type="text"
+          name="input-val"
+          id="input-val"
+          value=""
+          autocomplete="off"
+          class="h-20 text-right text-3xl p-2 mb-4"
+        />
+        <table>
+          <tr>
+            <th><button id="symbol" value="">AC</button></th>
+            <th><button id="symbol" value="*">DEl</button></th>
+            <th><button id="symbol" value="*">/</button></th>
+            <th><button id="symbol" value="*">*</button></th>
+          </tr>
+          <tr>
+            <td><button id="num" value="7">7</button></td>
+            <td><button id="num" value="8">8</button></td>
+            <td><button id="num" value="9">9</button></td>
+            <th><button id="symbol" value="-">-</button></th>
+          </tr>
+          <tr>
+            <td><button id="num" value="4">4</button></td>
+            <td><button id="num" value="5">5</button></td>
+            <td><button id="num" value="6">6</button></td>
+            <th><button id="symbol" value="+">+</button></th>
+          </tr>
+          <tr>
+            <td><button id="num" value="1">1</button></td>
+            <td><button id="num" value="2">2</button></td>
+            <td><button id="num" value="3">3</button></td>
+            <th rowspan="2"><button id="equal" value="=">=</button></th>
+          </tr>
+          <tr>
+            <td colspan="2" value="0"><button id="zero">0</button></td>
+            <td><button id="num" value=".">.</button></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+  <script defer src="./js/calculator.js"></script>
+</html>

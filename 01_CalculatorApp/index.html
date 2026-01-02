@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #calculator {
+
+        max-width: 1000px;
+      }
+      .one,
+      .two {
+        padding: 20px;
+      }
+      .one {
+        border-right: 1px solid black;
+      }
+      @media (max-width: 768px) {
+        .one,
+        .two{
+          border-right: none;
+          border-bottom: 1px solid black;
+          margin-bottom: 20px;
+        }
+
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+      }
+      label {
+        font-size: 18px;
+        margin-top: 15px;
+      }
+      #num1,
+      #num2,
+      #result,
+      select {
+        font-size: 18px;
+        height: 40px;
+        margin-bottom: 10px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+          rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+      }
+      button {
+        width: 150px;
+        height: 60px;
+        border: 3px solid #315cfd;
+        border-radius: 45px;
+        transition: all 0.3s;
+        cursor: pointer;
+        background: white;
+        font-size: 20px;
+        font-weight: 550;
+        margin-right: 10px;
+        margin-top: 15px;
+      }
+      button:hover {
+        background: #315cfd;
+        color: white;
+        font-size: 1.3em;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="calculator" class="container">
+      <h2 class="text-center mb-4" style="font-size: 2.5rem">Calculator App</h2>
+      <div class="row">
+        <div class="one col-lg-6 col-md-6 col-sm-12">
+          <img src="images/calculator.jpg" alt="Calculator Image" />
+        </div>
+        <div class="two col-lg-6 col-md-6 col-sm-12">
+          <label for="num1">Enter a First number:</label>
+          <input type="number" class="form-control" id="num1" />
+
+          <label for="num2">Enter a Second number:</label>
+          <input type="number" class="form-control" id="num2" />
+
+          <label for="operation">Select Operation</label>
+          <select id="operation" class="form-control">
+            <option value="value" selected>Select Operation</option>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+          </select>
+
+          <label for="result">Result</label>
+          <input type="number" class="form-control" id="result" readonly />
+
+          <div class="mt-3">
+            <button id="btn-doTask" type="button">Do Task</button>
+            <button id="btn-clear" type="button">Clear</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./js/Calculator.js "></script>
+</html>

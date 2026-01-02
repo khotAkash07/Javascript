@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Addition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body class="flex justify-center items-center h-screen bg-gray-100" onload="focus()">
+<div class="bg-green-400 flex flex-col gap-3 p-6 rounded-lg shadow-md w-80">
+    <label for="firstNum" class="font-semibold">Enter First Number</label>
+    <input type="text" id="firstNum" autocomplete="off"
+           class="bg-gray-800 h-10 px-3 text-white rounded-md" />
+
+    <label for="secNum" class="font-semibold">Enter Second Number</label>
+    <input type="text" id="secNum"
+           class="bg-gray-800 h-10 px-3 text-white rounded-md" autocomplete="off"/>
+
+    <button id="btn-add"
+            class="bg-yellow-400 p-2 items-center w-15">Add</button>
+</div>
+
+<script defer type="text/javascript" src="ReturnAddition.js"></script>
+</body>
+</html>
