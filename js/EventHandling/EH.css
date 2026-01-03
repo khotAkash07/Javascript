@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: deepskyblue;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80%;
+    width: 80%;
+    padding: 10%;
+    margin-inline: auto;
+    background-color: teal;
+}
+
+#submit{
+    background-color: dimgrey;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 20%;
+    margin-bottom: -40%;
+    box-shadow: black 4px 4px 8px 1px;
+
+}
