@@ -1,0 +1,5 @@
+let a = "Akash Anil Khot"
+
+const arr = Array.from(a);
+
+console.log(arr);
