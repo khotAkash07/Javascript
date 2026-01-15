@@ -1,32 +1,46 @@
 body {
-    font-family: Arial;
-    background: skyblue;
+    background: #222;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
-.container {
-    width: 300px;
-    background: white;
-    padding: 20px;
-    margin: 100px auto;
+.card {
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    color: #fff;
+    padding: 40px;
+    border-radius: 20px;
     text-align: center;
-    border-radius: 10px;
+    width: 300px;
 }
 
-input {
-    width: 100%;
-    height: 35px;
-    margin-bottom: 10px;
+.search input {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 20px;
+    height: 30px;
+    border-radius: 30px;
+    margin-right: 10px;
 }
 
-button {
-    width: 100%;
-    height: 35px;
-    background: deepskyblue;
-    color: white;
-    border: none;
+.search button {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 30%;
+    width: 80px;
+    height: 40px;
     cursor: pointer;
 }
 
-#result {
-    margin-top: 15px;
+.weather {
+    margin-top: 30px;
 }
+
+.temp { font-size: 60px; margin: 0; }
+.city { font-size: 30px; font-weight: 400; margin-top: -10px; }

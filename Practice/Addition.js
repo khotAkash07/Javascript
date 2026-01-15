@@ -1,30 +1,26 @@
-import {useState} from 'react';
+import {useRef} from 'react'
 
-let CheckBoxEvents= function () {
-
-    let subject = ["Java", "Python", "JavaScript", "React", "Spring", "Spring-Boot", "Html", "Css", "Bootstrap"];
+let UseRefDemo=()=>{
 	
-	let [tech, setTech] = useState([]);
+	let inputRef = useRef(null);
 	
-    let handelChange = (event) =>{
-		if(event.target.checked){
-			setTech(event.target.value);
-		}else{
-			setTech(tech.filter((item)=>{item !== event.target.value}))
-		}
+	function handleRef(){
+		inputRef.current.value = "";
 	}
 	
-    return(
-        <>
-			{
-                subject.map((item,index) => (
-					<label className="flex gap-7" key={index}>
-                        <input type='checkBox' key={index} onChange={handelChange}/>{item}
-                    </label>
-                ))
-            }
-        </>
-    )
-}
+	return(
+		<div>
+			<h1>useRef Practice</h1>
+			<label htmlFor="fname">Enter Your name</label>
+			<input type="text" name="fname" id="fname" />
+			<label htmlFor="Age">Enter Your Age</label>
+			<input type="text" name="Age" id="Age" />
+			<label htmlFor="Hobbie">Enter Your Hobbie</label>
+			<input type="text" name="Hobbie" id="Hobbie" />
+			
+			<button>Clear</button>
+		</div>
+	);
+};
 
-export default CheckBoxEvents
+export default UseRefDemo;

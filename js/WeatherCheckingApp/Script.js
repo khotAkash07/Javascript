@@ -1,25 +1,26 @@
-function getWeather() {
-    let city = document.getElementById("city").value;
-    let apiKey = "95abc5f22e961e1a0ca48974d88d99ed";
+const apiKey = "bbde1f798ff8643659db8f922b2a38c1"; // Ensure this is active and verified
+const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+const searchBox = document.querySelector(".search input");
+const searchBtn = document.querySelector(".search button");
 
-    fetch(url)
-        .then(res => res.json())
-        .then(data => {
-            if (data.cod !== 200) {
-                document.getElementById("result").innerHTML = "City not found";
-                return;
-            }
+async function checkWeather(city) {
+    const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
 
-            document.getElementById("result").innerHTML = `
-                <h3>${data.name}</h3>
-                <p>Temperature: ${data.main.temp} °C</p>
-                <p>Weather: ${data.weather[0].main}</p>
-                <p>Humidity: ${data.main.humidity}%</p>
-            `;
-        })
-        .catch(() => {
-            document.getElementById("result").innerHTML = "Error fetching data";
-        });
+    if (response.status === 401) {
+        alert("Invalid API Key or Key not yet active.");
+    } else if (response.status === 404) {
+        alert("City not found.");
+    } else {
+        var data = await response.json();
+
+        document.querySelector(".city").innerHTML = data.name;
+        document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°c";
+        document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
+        document.querySelector(".description").innerHTML = data.weather[0].description;
+    }
 }
+
+searchBtn.addEventListener("click", () => {
+    checkWeather(searchBox.value).then(r => {});
+});
