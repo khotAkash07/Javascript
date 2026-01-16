@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function calculateResult(){
+            let x = document.getElementById('quantity').value;
+            let y = document.getElementById('price').value;
+            console.log(x+" "+y);
+            document.getElementById('total').value = x*y;
+        }
+    </script>
+    <style>
+        #container{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            height: 50%;
+            padding: 20px;
+            gap : 10px;
+        }
+
+        input, button {
+            width: 70%;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <label for="quantity">Enter Quantity</label>
+        <input type="number" id="quantity" placeholder="Enter Quantity"  oninput="calculateResult()">
+
+        <label for="price">Enter Price</label>
+        <input type="number" id="price" placeholder="Enter Price" oninput="calculateResult()">
+
+        <label for="total">Total :</label>
+        <input type="number" id="total" placeholder="Total bill amount" readonly>
+
+    </div>
+</body>
+</html>
+

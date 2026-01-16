@@ -12,3 +12,6 @@ let str = "Akash Khot"
 
 let strArr = Array.from(str);
 console.log(strArr);
+
+let getCode = str.charCodeAt(3);
+console.log(getCode);

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function Addition(){
+            let x = parseInt(document.getElementById('fVal').value);
+            let y = parseInt(document.getElementById('sVal').value);
+
+            document.getElementById('result').value = x+y;
+        }
+        function subtraction(){
+            let x = document.getElementById('fVal').value;
+            let y = document.getElementById('sVal').value;
+            document.getElementById('result').value = x-y;
+        }
+        function multiplication(){
+            let x = document.getElementById('fVal').value;
+            let y = document.getElementById('sVal').value;
+            document.getElementById('result').value = x*y;
+        }
+    </script>
+    <style>
+        #container{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            height: 50%;
+            padding: 20px;
+        }
+
+        input, button {
+            width: 100%;
+            height: 30px;
+        }
+        #table{
+            width: 80%;
+            margin-left: 60px;
+
+        }
+        button{
+            margin: 20px 0 0 10px;
+            max-width: 60%;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <table id="table">
+        <tr>
+            <td><label for="fVal">First Value :</label></td>
+            <td> <input type="number" id="fVal" placeholder="Enter First Value"></td>
+        </tr>
+        <tr>
+            <td><label for="sVal">Second Value :</label></td>
+            <td><input type="number" id="sVal" placeholder="Enter Second Value" ></td>
+        </tr>
+        <tr>
+            <td><label for="result">Result :</label></td>
+            <td><input type="number" id="result" placeholder="Total"readonly></td>
+        </tr>
+        <tr id="buttons">
+            <td>
+                <button onclick="Addition()">
+                    Addition
+                </button>
+            </td>
+            <td>
+                <button onclick="multiplication()">
+                    Multiplication
+                </button>
+            </td>
+            <td>
+                <button onclick="subtraction()">
+                    Subtraction
+                </button>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
+
