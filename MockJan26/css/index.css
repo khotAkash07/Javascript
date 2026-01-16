@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+#navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: steelblue;
+    padding: 1rem 5%;
+}
+
+#links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+}
+
+#downloadButton {
+    color: white;
+    padding: 10px 20px;
+    background-color: teal;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#topView {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: steelblue;
+    padding: 5%;
+    align-items: center;
+    justify-content: center;
+}
+
+#topContent {
+    flex: 1;
+    min-width: 300px;
+    color: #e0ffff;
+}
+
+#topContent p {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+#img1 {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+#img1 img {
+    max-width: 100%;
+    height: auto;
+}
+
+#secView {
+    text-align: center;
+    padding: 3rem 5%;
+    background-color: whitesmoke;
+}
+
+#logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+#logos img {
+    height: 40px;
+    filter: grayscale(100%);
+}
+
+#wwd, #foV, #fiV {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 2% 5%;
+    justify-items: center;
+}
+
+#thirdView, #forthView, #fifthView {
+    padding: 4rem 5%;
+}
+
+#wwd div, #foV div, #fiV div {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#foV div { background-color: #ebfffc; }
+#forthView { background-color: #315cfd; }
+#fifthView { background-color: antiquewhite; }
+#foV button {
+    width: 100%;
+    padding: 15px;
+    background: black;
+    color: white;
+    border: none;
+    margin-top: auto; }
+
+#sixthView {
+    padding: 5rem 5%;
+    text-align: center;
+}
+
+#sixthView img {
+    max-width: 150px;
+    margin: 20px auto;
+    display: block;
+}
+
+#sixthView button {
+    display: block;
+    margin: 20px auto;
+    padding: 15px 30px;
+    border: 1px solid black;
+    background: transparent;
+}
+
+#finalView {
+    background-color: blue;
+    padding: 3rem 5%;
+    color: white;
+    overflow-x: auto; }
+
+#table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#table th, #table td {
+    padding: 10px;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    #navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #links {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #topView {
+        text-align: center;
+    }
+}
