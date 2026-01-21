@@ -3,7 +3,6 @@ let b = 20
 const c = 30
 
 if(true){
-    
     let a = 100
     let b = 200
     const c = 300
@@ -13,7 +12,6 @@ if(true){
     console.log(c)
 }
 console.log("This is out side of the Scope");
-
 console.log(a)
 console.log(b)
 console.log(c)
